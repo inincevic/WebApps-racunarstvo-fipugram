@@ -1,9 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/login">Prijava</router-link> |
-    <router-link to="/signup">Izradi račun</router-link>
-  </nav>
+  <div id="app">
+    <nav id="nav" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="@/assets/tfpu_hr.png" 
+              alt="" width="120" class="d-inline-block align-text-top">TFPUgram
+        </a>
+      <router-link to="/">Home</router-link> | 
+      <router-link to="/login">Prijava</router-link> |
+      <router-link to="/signup">Izradi račun</router-link>
+    </nav>
+  </div>
   <router-view/>
 </template>
 
