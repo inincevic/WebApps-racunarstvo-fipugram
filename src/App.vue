@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/login">Prijava</router-link>
+    <router-link to="/login">Prijava</router-link> |
+    <router-link to="/signup">Izradi račun</router-link>
   </nav>
   <router-view/>
 </template>
