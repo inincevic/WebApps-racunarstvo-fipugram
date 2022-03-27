@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-2"></div>
     <div class="col-7">
-      <story-card v-for="card in cards" :key="card" :info="card"/>
+      <story-card v-for="card in filterCards" :key="card.url" :info="card"/>
     </div>
     <div class="col-3"> 
       Sidebar 
@@ -48,6 +48,17 @@ export default {
   },
   components: {
     StoryCard,
+  },
+  computed: {
+    filterCards() {
+      let criteria = this.store.searchTerm;
+      let newCards = [];
+      for (let card of this.cards) {
+        if(card.description.indexOf(criteria) >= 0)
+          newCards.push(card)
+      }
+      return newCards;
+    }
   },
 };
 </script>
