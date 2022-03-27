@@ -1,26 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-  <div class="jumbotron">
-    <h1 class="display-2">Jumbotron test!</h1>
-    <p class="lead">This is a simple test of jumbotron use.</p>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-7">
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+      <instagram-card />
+    </div>
+    <div class="col-3"> Sidebar </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import InstagramCard from "@/components/InstagramCard.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
-  }
-}
+    InstagramCard,
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
