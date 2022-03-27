@@ -1,19 +1,20 @@
 <template>
   <div class="card text-center">
     <div class="card-header">
-      Featured
+      {{ info.description }}
     </div>
     <div class="card-body p-0">
-      <img class="card-img-top" src="https://picsum.photos/600" />
+      <img class="card-img-top" :src="info.url" />
     </div>
     <div class="card-footer text-muted">
-      2 days ago
+      {{ info.time }}
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "InstagramCard",
+  props: ['info'],
+  name: "StoryCard",
 };
 </script>
